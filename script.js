@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Utility Functions ---
     function updateTitle() {
-        document.title = `${needsSave ? '*' : ''}${currentFileName} - SimplePad`;
+        document.title = `${needsSave ? '*' : ''}${currentFileName} - notepad`;
     }
 
     function markUnsaved(unsaved = true) {
