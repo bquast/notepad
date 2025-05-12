@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+    <meta name="theme-color" content="#f0f0f0"/> <title>SimplePad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    </head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <button id="new-file" title="New File">New</button>
+            <button id="open-file" title="Open File">Open</button>
+            <button id="save-file" title="Save File">Save</button>
+            <button id="save-as-file" title="Save As...">Save As</button>
+            </header>
+
+        <textarea id="text-area" spellcheck="false" aria-label="Text editing area"></textarea>
+
+        <footer class="status-bar" id="status-bar">
+            <span id="line-col-status">Ln 1, Col 1</span>
+            </footer>
+    </div>
+
+    <input type="file" id="file-input" accept=".txt,text/plain" style="display: none;">
+
+    <script src="script.js"></script>
+</body>
+</html>

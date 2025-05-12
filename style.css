@@ -1,0 +1,103 @@
+/* Basic Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure HTML and Body take full height */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Use system fonts */
+    font-size: 16px; /* Sensible default for mobile */
+    background-color: #f0f0f0; /* Light background */
+    color: #333;
+    /* Prevent pull-to-refresh on mobile if desired */
+    /* overscroll-behavior: contain; */
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    /* Use 100% height to allow shrinking when keyboard appears, rather than fixed vh */
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent container scrollbars */
+}
+
+.app-header {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    padding: 8px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #cccccc;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.app-header button {
+    padding: 8px 12px;
+    margin: 4px;
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.app-header button:hover,
+.app-header button:focus {
+    background-color: #e8e8e8;
+    outline: 1px solid #a0a0a0;
+}
+
+.app-header button:active {
+    background-color: #d8d8d8;
+}
+
+#text-area {
+    flex-grow: 1; /* Allow textarea to fill available space */
+    border: none; /* Remove default border */
+    padding: 10px;
+    font-family: monospace; /* Keep monospaced for code/text editing */
+    font-size: 1rem; /* Adjust as needed */
+    line-height: 1.5;
+    resize: none; /* Disable manual resizing */
+    overflow-y: auto; /* Allow vertical scrolling within textarea */
+    width: 100%; /* Ensure it takes full width */
+    background-color: #ffffff; /* White editing area */
+    color: #000000;
+    /* Crucial for iOS to prevent zooming on input focus */
+    font-size: 16px; /* or larger */
+}
+
+#text-area:focus {
+    outline: none; /* Remove default focus ring, consider adding custom focus style if needed for accessibility */
+}
+
+.status-bar {
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-top: 1px solid #cccccc;
+    font-size: 0.8em;
+    color: #555;
+    text-align: right;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    height: auto; /* Let content determine height */
+    min-height: 25px; /* Ensure it's always visible */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Style for hidden file input (optional, but good practice) */
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

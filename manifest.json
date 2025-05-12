@@ -1,0 +1,27 @@
+{
+    "name": "Notepad",
+    "short_name": "Notepad",
+    "description": "A notepad app in the browser.",
+    "start_url": "/index.html",
+    "display": "standalone", /* Can also be fullscreen or minimal-ui */
+    "background_color": "#f0f0f0",
+    "theme_color": "#e0e0e0", /* Match header/footer */
+    "icons": [
+        {
+            "src": "/icons/icon-192.png", /* Update icon filenames */
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512.png", /* Update icon filenames */
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+         {
+            "src": "/icons/icon-maskable.png", /* Add a maskable icon if possible */
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
